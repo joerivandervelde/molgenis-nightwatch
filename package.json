@@ -1,0 +1,10 @@
+
+{
+  "//": "we use older versions because got error on firefox click event",
+  "dependencies": {
+    "chromedriver": "2.31.0",
+    "selenium-server": "3.4.0",
+    "nightwatch": "0.9.16",
+    "geckodriver": "1.8.0"
+  }
+}

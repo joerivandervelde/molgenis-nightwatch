@@ -1,0 +1,5 @@
+results/*
+!results/screenshots/
+results/screenshots/*
+node_modules
+
