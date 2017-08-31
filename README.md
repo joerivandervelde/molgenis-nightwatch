@@ -1,26 +1,35 @@
 # install nightwatch and dependencies (once)
 
+```
 npm install -g nightwatch
 npm install
+```
+
+# set saucelabs credentials
+```
+export SAUCE_USERNAME="<your user name>"
+export SAUCE_ACCESS_KEY="<your access key>"
+```
 
 # execute test on firefox
 
-nightwatch
+```
+nightwatch --config nightwatch.js
+```
 
-# execute test on chrome
+# Execute test on chrome
 
-nightwatch --env chrome
+```
+nightwatch --config nightwatch.js --env chrome
+```
 
-# execute in parallel on firefox and chrome
 
-nightwatch --env chrome,default
+# Execute test in parallel on ie11 and chrome
 
-# headless
+```
+nightwatch --config nightwatch.js --env ie11,chrome
+```
 
-xvfb-run -a nightwatch
-
-# compability
-
-Is known to fail on centos6.9 with firefox 52.3esr
-
-Is known to succeed on mac10.12.15 and firefox55.0.2 and chrome59.0.3071.115 
+# Travis
+Will also run on travis if you configure it for your github repo,
+see `.travis.yml` file.
