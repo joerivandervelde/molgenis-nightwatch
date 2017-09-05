@@ -8,3 +8,7 @@ install:
   - npm install
 script:
   - nightwatch --config nightwatch.js
+notifications:
+  email:
+    - joeriv@gmail.com
+    - k.j.van.der.velde@umcg.nl
