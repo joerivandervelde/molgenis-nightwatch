@@ -1,17 +1,18 @@
 module.exports = {
 
-  'Log in to MOLGENIS': function(client) {
-    client
-      .url('https://molgenis01.gcc.rug.nl')
-      .assert.title('MOLGENIS')
-      .waitForElementVisible('#open-button', 1000)
-      .pause(1000)
-      .click('#open-button')
-      .waitForElementVisible('#login-modal', 1000)
-      .setValue('#username-field', 'admin')
-      .setValue('#password-field', 'admin')
-      .click('#signin-button')
-      .waitForElementVisible('#signout-button', 1000)
-      .end();
-  }
+    'Get MVID-Central Homepage': function (client) {
+        client
+            .url('http://www.mvid-central.org/')
+            .assert.title('MVID')
+            .end();
+    },
+    'Check Dataexplorer table data': function (client) {
+        client
+            .url('http://www.mvid-central.org/plugin/dataexplorer')
+            .assert.title('Data explorer plugin')
+            .waitForElementVisible('#dataset-select-container', 1000)
+            .waitForElementVisible('#data-table', 5000)
+            .assert.containsText('table#data-table > tbody > tr:first-child > td:first-child', 'S285C1')
+            .end();
+    }
 };

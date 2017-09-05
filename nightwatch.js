@@ -17,7 +17,7 @@ module.exports = {
     },
 
     "test_settings": {
-        "default": {
+        "sauce": {
             "launch_url": "http://ondemand.saucelabs.com:80",
             "selenium_port": 80,
             "selenium_host": "ondemand.saucelabs.com",
@@ -32,7 +32,7 @@ module.exports = {
                 waitForConditionTimeout: 10000
             }
         },
-        "local": {
+        "default": {
             "selenium_host": "127.0.0.1",
             "selenium_port": 4444,
             "silent": true,
