@@ -10,5 +10,8 @@ script:
   - nightwatch --config nightwatch.js
 notifications:
   email:
-    - joeriv@gmail.com
-    - k.j.van.der.velde@umcg.nl
+    recipients:
+      - joeriv@gmail.com
+      - k.j.van.der.velde@umcg.nl
+    on_success: always
+    on_failure: always
